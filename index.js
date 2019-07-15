@@ -1,7 +1,4 @@
 const {
-    validateCard
-} = require('./api/card');
-const {
     makePayment
 } = require('./api/payment');
 const readlineSync = require('readline-sync');
@@ -55,12 +52,12 @@ lastName = readlineSync.question('please enter your lastname? ');
 makePayment(cardNo, Cvv, expiryMonth, expiryYear, Country, email, phoneNumber, firstName, lastName, Amount);
 
 
-// process.on('uncaughtException', (ex) => {
-//     console.log('WE GOT AN UNCAUGHT EXCEPTION')
-// })
-// process.on('unhandledRejection', (ex) => {
-//     console.log('WE GOT AN UNHANDLED EXCEPTION');
-//     process.exit(1);
-// })
+process.on('uncaughtException', (ex) => {
+    console.log('WE GOT AN UNCAUGHT EXCEPTION')
+})
+process.on('unhandledRejection', (ex) => {
+    console.log('WE GOT AN UNHANDLED EXCEPTION');
+    process.exit(1);
+})
 
 exports.Amount = Amount;
