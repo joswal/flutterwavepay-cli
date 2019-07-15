@@ -12,5 +12,13 @@
     "card"
   ],
   "author": "joseph adebajo",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.2.0",
+    "ravepay": "^1.2.4",
+    "readline-sync": "^1.4.9"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
 }
